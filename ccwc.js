@@ -49,7 +49,7 @@ class ccwc {
       });
 
       process.stdin.on("end", () => {
-        lineCount = stream.split(/\n|\r\n/).length - 1;
+        lineCount = stream.split(/\r\n|\r|\n/).length;
         console.log(`${lineCount}`);
       });
     }
@@ -80,7 +80,7 @@ class ccwc {
         stream += res;
       });
       process.stdin.on("end", () => {
-        wordCount = stream.split(/\s+/).length;
+        wordCount = stream.replace(/\s+\n/, "").split(" ").length;
         console.log(`${wordCount}`);
       });
     }
@@ -109,7 +109,7 @@ class ccwc {
       });
 
       process.stdin.on("end", () => {
-        charCount = stream.split("").length;
+        charCount = stream.replace(/\s+\n/, "").length;
         console.log(`${charCount}`);
       });
     }
