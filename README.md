@@ -4,7 +4,7 @@ This is a custom implementation of the UNIX wc command in Node.js. It is a comma
 
 ## Installation
 
-Just clone the repository, run `npm install` to install the dependencies, and you're good to go!
+Just clone the repository, that's it!
 
 ## Usage
 
